@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	<title>Hypotéky</title>
 </head>
 <body>
-
 <header>
 	<h1>Hypotéky</h1>
-	<p>Dávid Kizivat, Samuel Pastva</p>
+	<p id="authors">Dávid Kizivat, Samuel Pastva</p>
 </header>
 
-<section id="intro" class="chapter">
-<h2 class="chapter-title">Úvod</h2>
-<p>V tejto práci sa pokúšame o vytvorenie modelu realitného trhu v USA v období medzi rokmi 1990-2010, ktorého nestabilita viedla k finačnej kríze v roku 2008. Budeme skúmať hlavne niekoľko kľúčových aspektov ktoré viedli k naštartovaniu úpadku cien na realitnom trhu. To znamená, že už neuvažujeme väčšinu ekonomických udalostí ktoré nasledovali po páde cien nehnuteľností, keďže pôvod týchto udalostí je dokázateľne vystopovaný až k úpadku hodnoty takzvaných CDO. Ako neskôr ale ukážeme, hodnota CDO priamo súvisí s väčšinovou schopnosťou splácania hypoték. Tento faktor je bohužiaľ umelo prepojený na rast cien nehnuteľností, pričom ako ukážeme, aj malý pokles cien nehnuteľností dokáže v zle regulovanom systéme vyvolať vysokú mieru recesie. Z toho dôvodu sa zameriame hlavne na uváženie viacerých spôsobov regulácie takéhoto trhu. Konkrétne pôjde o výstavbu nových domov, centrálnu úrokovú mieru, ktorú definuje federálna vláda USA a o ratingové mechanizmy CDO.</p>
-</section>
+<div id="page">
+	<section id="intro" class="chapter">
+	<h2 class="chapter-title">Úvod</h2>
+	<p>V tejto práci sa pokúšame o vytvorenie modelu realitného trhu v USA v období medzi rokmi 1990-2010, ktorého nestabilita viedla k finačnej kríze v roku 2008. Budeme skúmať hlavne niekoľko kľúčových aspektov ktoré viedli k naštartovaniu úpadku cien na realitnom trhu. To znamená, že už neuvažujeme väčšinu ekonomických udalostí ktoré nasledovali po páde cien nehnuteľností, keďže pôvod týchto udalostí je dokázateľne vystopovaný až k úpadku hodnoty takzvaných CDO. Ako neskôr ale ukážeme, hodnota CDO priamo súvisí s väčšinovou schopnosťou splácania hypoték. Tento faktor je bohužiaľ umelo prepojený na rast cien nehnuteľností, pričom ako ukážeme, aj malý pokles cien nehnuteľností dokáže v zle regulovanom systéme vyvolať vysokú mieru recesie. Z toho dôvodu sa zameriame hlavne na uváženie viacerých spôsobov regulácie takéhoto trhu. Konkrétne pôjde o výstavbu nových domov, centrálnu úrokovú mieru, ktorú definuje federálna vláda USA a o ratingové mechanizmy CDO.</p>
+	</section>
 
-<section class="chapter" id="cdo">
-<h2 class="chapter-title">Čo je CDO a prečo je dôležité?</h2>
-<p>Collateralized debt obligation (CDO) je takzvaný úverový derivát. Za týmto názvom sa skrýva množstvo byrokracie, zmluvných podmienok a rôznych ďalších odvodených derivátov, no zjednodušene sa dá povedať, že ide o spôsob ako zoskupiť viacero menších dlhových obligácií (hypotéky, úvery, pôžičky) do väčšieho balíka, s ktorým už má následne zmysel efektívne obchodovať na veľkých medziárodných trhoch. CDO a ich varianty teda kupujú najmä rôzne investičné fondy a sporiteľne ktoré náslende obdržia zisk z úrokov na dlhoch, ktoré sú súčasťou CDO. V prípade že je niektorý z dlžníkov neschopný splácať, nesú ale taktiež možnú stratu. Z tohoto dôvodu sú všetky CDO ohodnotené ratingovými agentúrami podľa rizikovosti investície.</p>
-<p>CDO bolo pôvodne určené na združovanie menšieho počtu úverov poskytovaným hlavne väčším firmám. V takomto prípade teda nie je problém CDO ohodnotiť na základe finančných výkazov týchto firiem, predpokladaných výnosov v danom priemysle, a pod. Na druhej strane akonáhle sa začali objavovať CDO zložené z desiatok, prípadne až stoviek hypoték, neexistoval jednoznačný overený spôsob ako ohodnocovať takéto investičné balíky. Toto následne viedlo k stavu, kedy takmer všetky CDO vytvorené po roku 2005 (a taktiež väčšina starších) boli zložené buď z hypoték poskytnutým osobám ktoré zjavne nebudú schopné úver vrátiť alebo z hypoték, ktorých úroková miera sa v horizonte 5 rokov mala 2-3 krát zvýšiť.</p>
-<p>Rating CDO derivátov je podstatný hlavne z toho dôvodu, že napríklad dôchodkové sporiteľne majú z pravidla zakázané nakupovať aktíva s horším ako najlepším možným ratingom, aby sa predišlo možnému bankrotu nič netušiacich občanov. V prípade že teda takýto ratingový mechanizmus zlyhá, môže negatívne ovplyvniť celý finančný sektor na niekoľko desaťročí do budúcnosti, nie len ceny na trhu s nehnuteľnosťami.</p>
-</section>
+	<section class="chapter" id="cdo">
+	<h2 class="chapter-title">Čo je CDO a prečo je dôležité?</h2>
+	<p>Collateralized debt obligation (CDO) je takzvaný úverový derivát. Za týmto názvom sa skrýva množstvo byrokracie, zmluvných podmienok a rôznych ďalších odvodených derivátov, no zjednodušene sa dá povedať, že ide o spôsob ako zoskupiť viacero menších dlhových obligácií (hypotéky, úvery, pôžičky) do väčšieho balíka, s ktorým už má následne zmysel efektívne obchodovať na veľkých medziárodných trhoch. CDO a ich varianty teda kupujú najmä rôzne investičné fondy a sporiteľne ktoré náslende obdržia zisk z úrokov na dlhoch, ktoré sú súčasťou CDO. V prípade že je niektorý z dlžníkov neschopný splácať, nesú ale taktiež možnú stratu. Z tohoto dôvodu sú všetky CDO ohodnotené ratingovými agentúrami podľa rizikovosti investície.</p>
+	<p>CDO bolo pôvodne určené na združovanie menšieho počtu úverov poskytovaným hlavne väčším firmám. V takomto prípade teda nie je problém CDO ohodnotiť na základe finančných výkazov týchto firiem, predpokladaných výnosov v danom priemysle, a pod. Na druhej strane akonáhle sa začali objavovať CDO zložené z desiatok, prípadne až stoviek hypoték, neexistoval jednoznačný overený spôsob ako ohodnocovať takéto investičné balíky. Toto následne viedlo k stavu, kedy takmer všetky CDO vytvorené po roku 2005 (a taktiež väčšina starších) boli zložené buď z hypoték poskytnutým osobám ktoré zjavne nebudú schopné úver vrátiť alebo z hypoték, ktorých úroková miera sa v horizonte 5 rokov mala 2-3 krát zvýšiť.</p>
+	<p>Rating CDO derivátov je podstatný hlavne z toho dôvodu, že napríklad dôchodkové sporiteľne majú z pravidla zakázané nakupovať aktíva s horším ako najlepším možným ratingom, aby sa predišlo možnému bankrotu nič netušiacich občanov. V prípade že teda takýto ratingový mechanizmus zlyhá, môže negatívne ovplyvniť celý finančný sektor na niekoľko desaťročí do budúcnosti, nie len ceny na trhu s nehnuteľnosťami.</p>
+	</section>
 
-<section class="chapter" id="refinance">
-<h2 class="chapter-title">Čo je to prefinancovanie a prečo je dôležité?</h2>
-<p>Prefinancovanie(Refinancing) je populárny spôsob ako využiť rast cien domov na splácanie úrokov hypoték. Na to, aby tento proces mohol fungovať je nutné aby cena nehnuteľnosti rástla aspoň rovnako rýchlo ako je úroková miera na danej hypotéke. V takom prípade je možné na nehnuteľnosť uvaliť novú hypotéku na vyššiu sumu, pričom táto sa použije práve na splatenie pôvodnej hypotéky. Tento dnes populárny mechanizmus veľmi nebezpečne ovplyvňuje finančný trh. Vytvára totiž ilúziu stability a v dobe rastu dokáže výrazne oslabiť neschopnosť klientov splácať (podľa nezávislých výskumov sa dá vďaka refinancovaniu umelo zvýšiť solventnosť klientov až o 60%). V prípade zastavenia rastu (nemusí ani dôjsť k poklesu rastu, stačí mierne spomalenie) je následne takýto systém zaplavený bankrotujúcimi klientmi. Takáto umelá stabilita má ale ešte jeden nepríjemný efekt. CDO založené na takýchto hypotékach sa umelo zdajú byť extrémne stabilnou a silnou investíciou. Pokiaľ ceny domov rastu, vytvára táto kombinácia vysoký dopyt po hypotekárnych CDO, čo vytvára tlak na banky aby generovali čo najviac hypoték. Tento zvýšený tlak nakoniec viedol k znižovaniu minimálnej finančnej suverenity potrebnej na uzavretie hypotéky. Ako jeden z príkladov uvedieme latinsko amerického prisťahovalca s ročným prijmom $14,000 ktorému bola poskytnutá hypotéka na dom v hodnote $724,000.</p> 
-<p>To že takýto klienti nezbankrotovali v priebehu niekoľkých mesiacov je zásluhou práve refinancovania. Možno najalarmujúcejším problémom však je, že väčšina takýchto klientov nebola schopná rozumne odhadnúť svoje možnosti. Naskýta sa teda trochu politická otázka, či táto kríza nie je ani tak dielom finančného sektora ako nedostatočného prístupu vzdelávacích inštitúcií k ekonomickej gramotnosti. Morálna účasť bánk, ktoré podobné praktiky viac či menej otvorene podporovali je ale samozrejme taktiež značná.</p>
-<p>Ako teda vidíme, refinancovanie je nesmierne podstatný parameter, pretože v prípade dostatočného rastu jednej premennej (ceny domov) takmer úplne eliminuje vplyv negatívnych faktorov.</p>
-</section>
+	<section class="chapter" id="refinance">
+	<h2 class="chapter-title">Čo je to prefinancovanie a prečo je dôležité?</h2>
+	<p>Prefinancovanie(Refinancing) je populárny spôsob ako využiť rast cien domov na splácanie úrokov hypoték. Na to, aby tento proces mohol fungovať je nutné aby cena nehnuteľnosti rástla aspoň rovnako rýchlo ako je úroková miera na danej hypotéke. V takom prípade je možné na nehnuteľnosť uvaliť novú hypotéku na vyššiu sumu, pričom táto sa použije práve na splatenie pôvodnej hypotéky. Tento dnes populárny mechanizmus veľmi nebezpečne ovplyvňuje finančný trh. Vytvára totiž ilúziu stability a v dobe rastu dokáže výrazne oslabiť neschopnosť klientov splácať (podľa nezávislých výskumov sa dá vďaka refinancovaniu umelo zvýšiť solventnosť klientov až o 60%). V prípade zastavenia rastu (nemusí ani dôjsť k poklesu rastu, stačí mierne spomalenie) je následne takýto systém zaplavený bankrotujúcimi klientmi. Takáto umelá stabilita má ale ešte jeden nepríjemný efekt. CDO založené na takýchto hypotékach sa umelo zdajú byť extrémne stabilnou a silnou investíciou. Pokiaľ ceny domov rastu, vytvára táto kombinácia vysoký dopyt po hypotekárnych CDO, čo vytvára tlak na banky aby generovali čo najviac hypoték. Tento zvýšený tlak nakoniec viedol k znižovaniu minimálnej finančnej suverenity potrebnej na uzavretie hypotéky. Ako jeden z príkladov uvedieme latinsko amerického prisťahovalca s ročným prijmom $14,000 ktorému bola poskytnutá hypotéka na dom v hodnote $724,000.</p> 
+	<p>To že takýto klienti nezbankrotovali v priebehu niekoľkých mesiacov je zásluhou práve refinancovania. Možno najalarmujúcejším problémom však je, že väčšina takýchto klientov nebola schopná rozumne odhadnúť svoje možnosti. Naskýta sa teda trochu politická otázka, či táto kríza nie je ani tak dielom finančného sektora ako nedostatočného prístupu vzdelávacích inštitúcií k ekonomickej gramotnosti. Morálna účasť bánk, ktoré podobné praktiky viac či menej otvorene podporovali je ale samozrejme taktiež značná.</p>
+	<p>Ako teda vidíme, refinancovanie je nesmierne podstatný parameter, pretože v prípade dostatočného rastu jednej premennej (ceny domov) takmer úplne eliminuje vplyv negatívnych faktorov.</p>
+	</section>
 
+	<footer>
+		<p>&copy; 2014 - IV109 Modelování a simulace - projekt</p>
+</footer>
+</div>
 </body>
 </html>
