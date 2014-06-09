@@ -105,14 +105,19 @@
 	<div  id="abparams-sensi">
 			<figure class="graph" id="refinance-graph">
 				<canvas id="refinance" height="450" width="920"></canvas>
-				<figcaption>Graf 3: Senzitivita faktoru prefinancovania (relatívna cena domov na trhu v čase od 1/1/1990 do 31/12/2010).</figcaption>
+				<figcaption>Graf 5: Senzitivita faktoru prefinancovania (relatívna cena domov na trhu v čase od 1/1/1990 do 31/12/2010).</figcaption>
 			</figure>
 	</div>
 	<p>
 		V grafoch XX a XY môžeme vidieť vplyv solventnosti klientov na ceny nehnuteľností bez a s vplyvom prefinancovania. Môžme vidieť, že bez povoleného prefinancovania sa začínajú krachy prejavujú oveľa skôr. Napriek tomu že ceny v systéme bez prefinancovania klesajú po krachu pri vysokej miere bankrotu hypoték na menšie hodnoty ako v systéme s prefinancovaním, celková povaha systému pri nižších bankrotových mierach je stabilnejšia, pretože rizikové hypotéky zbankrotujú skôr.
 	</p>
 	</section>
-
+	<div id="final-div">
+			<figure class="graph" id="final-graph">
+				<canvas id="final" height="450" width="920"></canvas>
+				<figcaption>Graf 6: Relatívne ceny domov <span style="background-color: #E89649; color:white">bez refinancovaia</span> a <span style="background-color: #2C8BC1; color:white">s refinancovaním</span> (relatívna cena domov na trhu v čase od 1/1/1990 do 31/12/2010).</figcaption>
+			</figure>
+	</div>
 	<section>
 	<h2>Záverečné pozorovania</h2>
 	</section>
@@ -527,5 +532,28 @@ var lineChartData = {
 	
 	</script>
 
+<script>
+	var lineChartData = {
+	labels : ['', '6', '', '18', '', '30', '', '42', '', '54', '', '66', '', '78', '', '90', '', '102', '', '114', '', '126', '', '138', '', '150', '', '162', '', '174', '', '186', '', '198', '', '210', '', '222', '', '234', ''] ,
+	datasets : [
+		{
+			strokeColor : "rgba(44,139,193,1)",
+			fillColor : "rgba(220,220,220,0)",
+			pointStrokeColor : "#fff",
+			data :  [1.0, 11.96, 47.27, 104.49, 181.47, 279.69, 400.45, 510.49, 580.36, 635.66, 699.1, 765.19, 829.03, 892.14, 955.83, 1026.62, 1110.25, 1188.73, 1246.11, 1282.61, 1298.46, 1320.06, 1370.78, 1438.66, 1513.03, 1597.41, 1694.9, 1793.89, 1884.06, 1965.9, 2039.84, 2099.12, 2137.5, 1791.43, 894.18, -87.18, -629.81, -468.69, -152.0, 156.52, 448.52] ,
+		}
+		,
+		{
+			strokeColor : "rgba(232,150,73,1)",
+			fillColor : "rgba(220,220,220,0)",
+			pointStrokeColor : "#fff",
+			data :  [1.0, 11.96, 47.27, 104.49, 181.47, 279.69, 400.45, 510.49, 580.36, 635.66, 699.1, 765.19, 829.03, 892.14, 955.83, 1026.62, 1110.25, 1188.73, 1246.11, 1282.61, 1298.46, 1320.06, 1370.78, 1438.66, 1513.03, 1597.41, 1694.9, 1793.89, 1857.42, 1679.91, 1288.17, 832.85, 435.46, 203.46, 225.24, 419.95, 612.96, 808.15, 1014.95, 1223.03, 1423.24] ,
+		}
+	]
+}
+
+	var myLine = new Chart(document.getElementById("final").getContext("2d")).Line(lineChartData, {pointDot: false, bezierCurve : false});
+	
+	</script>
 </body>
 </html>
