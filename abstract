@@ -18,7 +18,6 @@ popis provedených analýz modelu (analýza citlivosti jednotlivých parametrů,
 zhodnocení závěrů simulace, diskuze možných rozšíření.
 
 	/ Ukazka spravania s realnymi podmienkami => BAM!
-	/ Ukazat ze aj s nekonstantnym rastom sa nic nezmeni
 	/ Ukazka spravania bez znizovania suverenity => NO BAM!
 	/ Ukazka s permanentnym rasotm => Exp!
 	/ Citlivost parametrov
@@ -50,5 +49,13 @@ Ceny domov modelujeme rovnakým spôsobom ako napr. !!! Citation needed. Samotn�
 
 Trh s hypotékami
 
-Trh s hypotékami modelujeme pomocou dvoch rezervoárov, jeden reprezentuje aktuálny počet domov na predaj, druhý počet domov na ktoré je uvalená hypotéka. Počet domov na predaj závisí jednak od ponuky, ktorá je popísaná vyššie a taktiež od počtu bankrotujúcich hypoték, ktoré vracajú istý počet domov späť na trh. Počet domov na ktorých je uvalená hypotéka narastá úmerne dopytu, pričom ale počet domov na predaj nemôže byť záporný. Počet bankrotujúcich hypoték následne závisí od dvoch faktorov, a to síce finančná solventnosť klientov a miera refinancovania. Finančná solventnosť je daná tabuľkou, aby bolo možné skúmať vplyv rôzneho vývoja a 
+Trh s hypotékami modelujeme pomocou dvoch rezervoárov, jeden reprezentuje aktuálny počet domov na predaj, druhý počet domov na ktoré je uvalená hypotéka. Počet domov na predaj závisí jednak od ponuky, ktorá je popísaná vyššie a taktiež od počtu bankrotujúcich hypoték, ktoré vracajú istý počet domov späť na trh. Množstvo domov na ktorých je uvalená hypotéka narastá úmerne dopytu, pričom ale počet domov na predaj nemôže byť záporný. Množstvo bankrotujúcich hypoték následne závisí od dvoch faktorov, a to síce finančná solventnosť klientov a miera refinancovania. 
+
+Finančná solventnosť je nastavená tak, aby vyjadrovala koľko % hypoték musí v priemere mesačne zbankrotovať v prípade, že uvažujeme priemernú dĺžku hypotéky 30 rokov. Číslo je také nízke preto, lebo simulácia prebieha po mesiacoch. Teda ak napr. každý mesiac zbankrotuje 0.000166 hypoték, po 30 rokoch to bude približne 5%. Miera prefinancovania sa počíta ako derivácia cien domov v danom období, pričom je opäť normovaná vhodným faktorom tak, aby správne redukovala mieru bankrotov. (Pri miere 1 nastáva polovičná redukcia, pri miere 0 žiadna) 
+
+Stabilita parametrov
+
+Najprv zhodnotíme stabilitu parametrov cien domov, pričom meriania boli za účelom sprehľadnenia vykonené bez zohľadnenia prefinancovania. 
+
+Ako bolo spomenuté, parametre A a B v sebe zahŕňajú množstvo rôznych faktorov odohrávajúcich sa na trhu s nehnuteľnosťami, preto nie je jednoduché odhadnúť ich správne hodnoty. Z dole uvedených grafov je vidieť, že parameter A (ovplyvňujúci dopyt po domoch) nemá na vývoj cien veľmi zásadný dopad a 
 
