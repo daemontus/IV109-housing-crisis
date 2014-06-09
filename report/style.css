@@ -22,7 +22,7 @@ body
 	background-color: #FCFCFC;
 	color: #2D2D2D;
 	font-size: 17px;
-	line-height: 20px;
+	line-height: 22px;
 }
 
 div#page 
@@ -67,7 +67,43 @@ footer
 	font-size: 12px
 }
 
+a.reference
+{
+	color: #9E9E9E;
+	border-bottom: dotted 1px;
+	padding: -8px;
+	text-decoration: none;
+	vertical-align: text-top;
+}
 
+a.reference:hover
+{
+	color: #9E9E9E;
+	border-bottom: 0px;
+}
+
+div#abparams-sensi
+{
+	width: 450px;
+	display: inline-table;
+}
+
+div#abparams-sensi>canvas
+{
+	width: 450px;
+}
+
+figcaption
+{
+	font-style: italic;
+	text-align: center;
+	font-size: 15px;
+}
+
+figure
+{
+	margin: 10px 0 20px 0;
+}
 
 
 

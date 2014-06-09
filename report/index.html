@@ -4,6 +4,7 @@
 	<meta charset="UTF-8" />
 	<link rel="stylesheet" type="text/css" href="./style.css">
 	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<script src="./Chart.js"></script>
 	<title>Hypotéky</title>
 </head>
 <body>
@@ -27,14 +28,14 @@
 	<section class="chapter">
 	<h2 class="chapter-title">Základné pojmy a relevantné data</h2>
 	<p>
-		Napriek tomu že kríza z roku 2008 postihla široké spektrum trhov a inštitúcií, jej pôvod sa dá dokázateľne vystovpovať k poklesu hodnoty tzv. CDO <a target="_blank" href="http://books.google.sk/books/about/The_Big_Short_Inside_the_Doomsday_Machin.html?id=eParwQ0YdrcC&redir_esc=y">[?]</a>. CDO(Collateralized debt obligation <a target="_blank" href="http://www.investopedia.com/terms/c/cdo.asp">[?]</a>) je úverový derivát, ktorý zoskupuje viacero pohľadávok do jedného väčšieho balíka za účelom zjednodušenia transakcií a minimalizácie rizika. CDO bolo pôvodne vytvorené na združovanie úverov väčším firmám, no v 90-tych rokoch sa začalo vo veľkej miere využívať na združovanie hypoték. Výnos z CDO teda závisí jednak na úrokovej miere hypoték ktoré sú v ňom vložené, hlavne ale na počte ľudí, ktorý nie sú schopný tieto hypotéky splácať. Teda na solventnosti majiteľov domov. V optimálnom prípade by mala byť táto strata z väčšej časti pokrytá následným odpredajom exekuovanej nehnuteľnosti. No keďže cena nehnuteľností sa riadi klasickými pravidlami dopytu a ponuky, každá bankrotujúca hypotéka znižuje ceny domov, a tak aj zvyšuje stratu z prípade ďalších bankrotov.
+		Napriek tomu že kríza z roku 2008 postihla široké spektrum trhov a inštitúcií, jej pôvod sa dá dokázateľne vystovpovať k poklesu hodnoty tzv. CDO <a target="_blank" href="http://books.google.sk/books/about/The_Big_Short_Inside_the_Doomsday_Machin.html?id=eParwQ0YdrcC&redir_esc=y" class="reference">[?]</a>. CDO(Collateralized debt obligation <a target="_blank" href="http://www.investopedia.com/terms/c/cdo.asp" class="reference">[?]</a>) je úverový derivát, ktorý zoskupuje viacero pohľadávok do jedného väčšieho balíka za účelom zjednodušenia transakcií a minimalizácie rizika. CDO bolo pôvodne vytvorené na združovanie úverov väčším firmám, no v 90-tych rokoch sa začalo vo veľkej miere využívať na združovanie hypoték. Výnos z CDO teda závisí jednak na úrokovej miere hypoték ktoré sú v ňom vložené, hlavne ale na počte ľudí, ktorý nie sú schopný tieto hypotéky splácať. Teda na solventnosti majiteľov domov. V optimálnom prípade by mala byť táto strata z väčšej časti pokrytá následným odpredajom exekuovanej nehnuteľnosti. No keďže cena nehnuteľností sa riadi klasickými pravidlami dopytu a ponuky, každá bankrotujúca hypotéka znižuje ceny domov, a tak aj zvyšuje stratu z prípade ďalších bankrotov.
 	</p>
 	<p>
 		To by nebol výrazný problém, ak by počet bankrotujúcich hypoték bol dlhodobo približne rovnaký. Problém nastáva v okamihu, keď sa začne znižovať solventnosť klientov, a tak začnú vznikať veľké skupiny hypoték, ktorých bankrot je skôr otázka času ako pravdepodobnosti. Prečo ale bankové inštitúcie vôbec začali vydávať hypotéky pochybnej kvality? Čiastočne za to opäť môže princíp dopytu a ponuky. Každé CDO totiž musí byť ohodnotené ratingovou agentúrou na rizikovosť. Toto je veľmi podstatný proces, keďže napríklad mnohé dôchodkové a sporiace fondy majú povolené investovať len do aktív s najvyšším možným ratingom. Ako ukázalo skúmanie, ktoré prebehlo po krachu relitného trhu, algoritmus na hodnotenie rizikovosti CDO bol nesprávne nastavený a teda v prípade správneho rozloženia hypoték po celých spojených štátoch bolo možné získať najvyšší rating aj s hypotékami, ktorých šanca na úplné splatenie bola prakticky nulová. V dole uvedenom grafe môžme vidieť práve rozdiel medzi ohodnotením jednotlivých hypoték a ohodnotením samotného CDO. Takáto chyba v systéme, či už úmyselná alebo nie, spôsobila vysoký dopyt po hypotékach bez ohľadu na ich rizikovosť. Takýto dopyt spôsobil, že napríklad rodina istého latinsko amerického prisťahovalca s ročným prijmom $14,000 si mohla dovoliť hypotéku na dom v hodnote $724,000. Na mieste je teda aj otázka, či by sa podobnému problému nedalo predísť aj zvýšením dôrazu na výuku finančnej gramotnosťi v školách.
 	</p>
-	<div style="text-align: center;"><img src="comparison-chart.png"><p>Porovnanie ratingov hypoték(červená) a CDO z týchto hypoték zložených okolo roku 2008. <a target="_blank" href="http://www.kellogg.northwestern.edu/~/media/Files/Faculty/Research/Alchemy_CDO_Credit_Ratings.ashx">Zdroj.</a></p></div>
+	<div style="text-align: center;"><img src="comparison-chart.png"><p>Porovnanie ratingov hypoték(červená) a CDO z týchto hypoték zložených okolo roku 2008. <a target="_blank" href="http://www.kellogg.northwestern.edu/~/media/Files/Faculty/Research/Alchemy_CDO_Credit_Ratings.ashx" class="reference">Zdroj.</a></p></div>
 	<p>
-		Prečo ale potom hypotéky nebankrotovali postupne ale hromadili sa na trhu? Lebo na hypotekárnom trhu vystupuje ešte jeden podstatný faktor, na ktorý sa často zabúda, a tým je prefinancovanie. Prefinancovanie(Refinancing) je populárny spôsob ako využiť rast cien domov na splácanie úrokov hypoték. Na to, aby tento proces mohol fungovať je nutné aby cena nehnuteľnosti rástla aspoň rovnako rýchlo ako je úroková miera na danej hypotéke. V takom prípade je možné na nehnuteľnosť uvaliť novú hypotéku na vyššiu sumu, pričom tento rozdiel sa použije práve na splatenie pôvodnej hypotéky. Tento dnes populárny mechanizmus veľmi nebezpečne ovplyvňuje finančný trh, vytvára totiž ilúziu stability a v dobe rastu dokáže výrazne oslabiť neschopnosť klientov splácať. Podľa výskumov sa dá vďaka refinancovaniu umelo zvýšiť solventnosť klientov až o 60% <a target="_blank" href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2184514">[?]</a>. V prípade zastavenia rastu (nemusí ani dôjsť k poklesu rastu, stačí mierne spomalenie pod hranicu úrokovej miery) je následne takýto systém zaplavený bankrotujúcimi klientmi. Nesprávne ohodnotené CDO založené na takýchto hypotékach sa potom umelo zdajú byť extrémne stabilnou a silnou investíciou. 
+		Prečo ale potom hypotéky nebankrotovali postupne ale hromadili sa na trhu? Lebo na hypotekárnom trhu vystupuje ešte jeden podstatný faktor, na ktorý sa často zabúda, a tým je prefinancovanie. Prefinancovanie(Refinancing) je populárny spôsob ako využiť rast cien domov na splácanie úrokov hypoték. Na to, aby tento proces mohol fungovať je nutné aby cena nehnuteľnosti rástla aspoň rovnako rýchlo ako je úroková miera na danej hypotéke. V takom prípade je možné na nehnuteľnosť uvaliť novú hypotéku na vyššiu sumu, pričom tento rozdiel sa použije práve na splatenie pôvodnej hypotéky. Tento dnes populárny mechanizmus veľmi nebezpečne ovplyvňuje finančný trh, vytvára totiž ilúziu stability a v dobe rastu dokáže výrazne oslabiť neschopnosť klientov splácať. Podľa výskumov sa dá vďaka refinancovaniu umelo zvýšiť solventnosť klientov až o 60% <a target="_blank" href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2184514" class="reference">[?]</a>. V prípade zastavenia rastu (nemusí ani dôjsť k poklesu rastu, stačí mierne spomalenie pod hranicu úrokovej miery) je následne takýto systém zaplavený bankrotujúcimi klientmi. Nesprávne ohodnotené CDO založené na takýchto hypotékach sa potom umelo zdajú byť extrémne stabilnou a silnou investíciou. 
 	</p>
 	<p>
 		Keď sa spoja dohromady tieto tri faktory, vzniká systém ktorý na začiatku naštartuje rast cien domov, následne s rastom dopytu po CDO klesá solventnosť klientov. Rast cien ale vďaka prefinancovaniu tento pokles dokáže do určitej miery vyrovnávať, a teda sa na trhu hromadia rizikové hypotéky. V prípade spomalenia rastu cien tieto hypotéky bankrotujú, čím zvyšujú ponuku a ďalej znižujú ceny nehnuteľností. Tak vzniká pozitívna väzba ktorá naruší rovnováhu v systéme. 
@@ -58,6 +59,20 @@
 	<p>
 		Najprv zhodnotíme stabilitu parametrov cien domov, pričom meriania boli za účelom sprehľadnenia vykonené bez zohľadnenia prefinancovania. 
 	</p>
+	<div>
+		<div id="abparams-sensi">
+			<figure class="graph" id="asensi-figure">
+				<canvas id="asensi" height="225" width="450"></canvas>
+				<figcaption>Graf 1: Senzitivita parametru A.</figcaption>
+			</figure>
+		</div>
+		<div  id="abparams-sensi">
+			<figure class="graph" id="bsensi-figure">
+				<canvas id="bsensi" height="225" width="450"></canvas>
+				<figcaption>Graf 2: Senzitivita parametru B.</figcaption>
+			</figure>
+		</div>
+	</div>
 	<p>
 		Ako bolo spomenuté, parametre A a B v sebe zahŕňajú množstvo rôznych faktorov odohrávajúcich sa na trhu s nehnuteľnosťami, preto nie je jednoduché odhadnúť ich správne hodnoty. V skratke by sa dalo povedať, že predstavujú flexibilitu systému vzhľadom na ceny nehnuteľností, teda ako rýchlo a účinne je systém schopný reagovať na zmeny cien. V prípade že sa teda ich hodnoty blížia jednej, je vývoj cien domov značne predvídateľný a prakticky kopíruje vývoj úrokovej miery, ktorá v tom okamihu zostáva jediným podstatným faktorom. Na druhej strane, v prípade že tieto parametre znížime zhruba na B=0.01 a A=0.005, teda pomerne statický trh, dostávame sa na hodnoty podobné skutočnému vývoju cien. (Náš rast je predsa len o niečo nižší, keďže nezahŕňame napr. špekulatívne skupovanie nehnuteľností) Takéto hodnoty taktiež zodpovedajú predpokladu, ktorý sme spomenuli vyššie, a to síce že pre priemerného američana nezohrávala až tak výrazne úlohu cena domu ako takého ako cena a výhodnosť hypotéky.  
 	</p>
@@ -70,5 +85,168 @@
 		<p>&copy; 2014 - IV109 Modelování a simulace - projekt</p>
 </footer>
 </div>
+<script>
+
+	var lineChartData = {
+	labels : ['', '6', '', '18', '', '30', '', '42', '', '54', '', '66', '', '78', '', '90', '', '102', '', '114', '', '126', '', '138', '', '150', '', '162', '', '174', '', '186', '', '198', '', '210', '', '222', '', '234', ''] ,
+	datasets : [
+		{
+			strokeColor : "rgba(58,150,202,1)",
+			fillColor : "rgba(220,220,220,0)",
+			pointStrokeColor : "#fff",
+			data :  [1.0, 12.06, 48.01, 106.92, 187.03, 290.22, 418.18, 537.76, 618.64, 685.6, 761.35, 840.48, 918.04, 995.45, 1074.02, 1160.26, 1260.16, 1355.82, 1430.85, 1484.96, 1517.9, 1555.83, 1622.69, 1707.1, 1798.6, 1900.85, 2017.18, 2136.12, 2247.18, 2350.57, 2446.47, 2527.9, 2588.45, 2638.41, 2687.21, 2738.44, 2795.41, 2867.71, 2964.14, 3073.75, 3186.53] ,
+		}
+		,
+		{
+			strokeColor : "rgba(225,27,243,1)",
+			fillColor : "rgba(220,220,220,0)",
+			pointStrokeColor : "#fff",
+			data :  [1.0, 12.04, 47.82, 106.31, 185.62, 287.53, 413.63, 530.74, 608.74, 672.62, 745.08, 820.7, 894.54, 968.04, 1042.52, 1124.49, 1219.87, 1310.74, 1380.82, 1429.95, 1458.02, 1491.22, 1553.39, 1632.97, 1719.47, 1816.51, 1927.36, 2040.52, 2145.52, 2242.65, 2332.16, 2407.12, 2461.24, 2504.9, 2547.56, 2592.79, 2643.86, 2710.31, 2800.79, 2904.28, 3010.71] ,
+		}
+		,
+		{
+			strokeColor : "rgba(252,238,108,1)",
+			fillColor : "rgba(220,220,220,0)",
+			pointStrokeColor : "#fff",
+			data :  [1.0, 12.01, 47.64, 105.7, 184.22, 284.88, 409.16, 523.86, 599.07, 659.97, 729.29, 801.58, 871.9, 941.72, 1012.37, 1090.35, 1181.53, 1267.96, 1333.47, 1378.03, 1401.64, 1430.58, 1488.52, 1563.78, 1645.79, 1738.16, 1844.09, 1952.03, 2051.59, 2143.09, 2226.87, 2296.03, 2344.43, 2382.52, 2419.78, 2459.76, 2505.7, 2567.07, 2652.41, 2750.56, 2851.45] ,
+		}
+		,
+		{
+			strokeColor : "rgba(47,6,146,1)",
+			fillColor : "rgba(220,220,220,0)",
+			pointStrokeColor : "#fff",
+			data :  [1.0, 11.99, 47.45, 105.09, 182.83, 282.27, 404.77, 517.11, 589.61, 647.65, 713.97, 783.08, 850.07, 916.43, 983.49, 1057.76, 1145.03, 1227.33, 1288.62, 1328.98, 1348.54, 1373.62, 1427.75, 1499.12, 1577.12, 1665.28, 1766.78, 1870.02, 1964.65, 2051.09, 2129.69, 2193.66, 2236.93, 2270.09, 2302.58, 2337.97, 2379.43, 2436.39, 2517.25, 2610.74, 2706.77] ,
+		}
+		,
+		{
+			strokeColor : "rgba(184,13,210,1)",
+			fillColor : "rgba(220,220,220,0)",
+			pointStrokeColor : "#fff",
+			data :  [1.0, 11.96, 47.27, 104.49, 181.47, 279.69, 400.45, 510.49, 580.36, 635.66, 699.1, 765.19, 829.03, 892.14, 955.83, 1026.62, 1110.25, 1188.73, 1246.12, 1282.61, 1298.46, 1320.06, 1370.78, 1438.66, 1513.03, 1597.41, 1694.9, 1793.89, 1884.06, 1965.9, 2039.84, 2099.12, 2137.81, 2166.56, 2194.85, 2226.2, 2263.75, 2316.86, 2393.8, 2483.2, 2574.95] ,
+		}
+		,
+		{
+			strokeColor : "rgba(197,179,181,1)",
+			fillColor : "rgba(220,220,220,0)",
+			pointStrokeColor : "#fff",
+			data :  [1.0, 11.93, 47.09, 103.9, 180.12, 277.15, 396.2, 504.0, 571.33, 623.97, 684.67, 747.88, 808.75, 868.78, 929.33, 996.87, 1077.12, 1152.04, 1205.8, 1238.74, 1251.22, 1269.66, 1317.31, 1382.04, 1453.15, 1534.12, 1627.99, 1723.11, 1809.24, 1886.91, 1956.61, 2011.66, 2046.23, 2071.04, 2095.59, 2123.39, 2157.5, 2207.24, 2280.75, 2366.55, 2454.5] ,
+		}
+		,
+		{
+			strokeColor : "rgba(150,160,202,1)",
+			fillColor : "rgba(220,220,220,0)",
+			pointStrokeColor : "#fff",
+			data :  [1.0, 11.91, 46.9, 103.31, 178.78, 274.65, 392.02, 497.63, 562.49, 612.58, 670.65, 731.14, 789.18, 846.33, 903.92, 968.44, 1045.53, 1117.14, 1167.55, 1197.22, 1206.61, 1222.2, 1267.08, 1328.99, 1397.16, 1475.04, 1565.62, 1657.22, 1739.66, 1813.52, 1879.37, 1930.58, 1961.42, 1982.72, 2003.95, 2028.6, 2059.7, 2106.48, 2176.97, 2259.57, 2344.15] ,
+		}
+		,
+		{
+			strokeColor : "rgba(23,154,138,1)",
+			fillColor : "rgba(220,220,220,0)",
+			pointStrokeColor : "#fff",
+			data :  [1.0, 11.88, 46.72, 102.73, 177.46, 272.18, 387.91, 491.39, 553.85, 601.49, 657.04, 714.93, 770.31, 824.73, 879.55, 941.25, 1015.39, 1083.93, 1131.23, 1157.88, 1164.45, 1177.47, 1219.86, 1279.22, 1344.73, 1419.81, 1507.4, 1595.79, 1674.84, 1745.23, 1807.56, 1855.28, 1882.75, 1900.89, 1919.16, 1941.02, 1969.46, 2013.65, 2081.46, 2161.22, 2242.77] ,
+		}
+		,
+		{
+			strokeColor : "rgba(137,236,124,1)",
+			fillColor : "rgba(220,220,220,0)",
+			pointStrokeColor : "#fff",
+			data :  [1.0, 11.86, 46.54, 102.15, 176.15, 269.74, 383.87, 485.27, 545.4, 590.67, 643.83, 699.24, 752.1, 803.95, 856.18, 915.23, 986.64, 1052.3, 1096.72, 1120.58, 1124.58, 1135.27, 1175.42, 1232.48, 1295.59, 1368.13, 1452.98, 1538.43, 1614.38, 1681.58, 1740.69, 1785.21, 1809.63, 1824.91, 1840.53, 1859.92, 1886.02, 1927.91, 1993.36, 2070.58, 2146.32] ,
+		}
+		,
+		{
+			strokeColor : "rgba(123,132,153,1)",
+			fillColor : "rgba(220,220,220,0)",
+			pointStrokeColor : "#fff",
+			data :  [1.0, 11.83, 46.36, 101.58, 174.86, 267.34, 379.9, 479.26, 537.13, 580.13, 630.99, 684.06, 734.52, 783.96, 833.75, 890.34, 959.18, 1022.18, 1063.91, 1085.2, 1086.85, 1095.42, 1133.56, 1188.55, 1249.47, 1319.7, 1402.06, 1484.8, 1557.89, 1622.16, 1678.3, 1719.9, 1741.52, 1754.23, 1767.49, 1784.68, 1808.69, 1848.56, 1827.21, 1706.45, 1620.96] ,
+		}
+	]
+}
+
+
+	var myLine = new Chart(document.getElementById("asensi").getContext("2d")).Line(lineChartData, {pointDot: false, bezierCurve : false});
+	
+	</script>
+	<script>
+
+	var lineChartData = {
+	labels : ['', '6', '', '18', '', '30', '', '42', '', '54', '', '66', '', '78', '', '90', '', '102', '', '114', '', '126', '', '138', '', '150', '', '162', '', '174', '', '186', '', '198', '', '210', '', '222', '', '234', ''] ,
+	datasets : [
+		{
+			strokeColor : "rgba(41,105,17,1)",
+			fillColor : "rgba(220,220,220,0)",
+			pointStrokeColor : "#fff",
+			data :  [1.0, 12.09, 48.2, 107.54, 188.46, 292.95, 422.8, 544.92, 628.78, 698.94, 778.12, 860.94, 942.44, 1024.0, 1106.93, 1197.76, 1302.52, 1403.34, 1483.73, 1543.26, 1581.56, 1624.72, 1696.82, 1786.6, 1883.68, 1991.74, 2114.18, 2239.58, 2357.38, 2467.74, 2570.8, 2659.48, 2727.28, 2784.37, 2840.18, 2898.31, 2962.07, 3041.15, 3144.45, 3261.15, 3381.24] ,
+		}
+		,
+		{
+			strokeColor : "rgba(213,7,209,1)",
+			fillColor : "rgba(220,220,220,0)",
+			pointStrokeColor : "#fff",
+			data :  [1.0, 11.96, 47.27, 104.49, 181.47, 279.69, 400.45, 510.49, 580.36, 635.66, 699.1, 765.19, 829.03, 892.14, 955.83, 1026.62, 1110.25, 1188.73, 1246.12, 1282.61, 1298.46, 1320.06, 1370.78, 1438.66, 1513.03, 1597.41, 1694.9, 1793.89, 1884.06, 1965.9, 2039.84, 2099.12, 2137.81, 2166.56, 2194.85, 2226.2, 2263.75, 2316.86, 2393.8, 2483.2, 2574.95] ,
+		}
+		,
+		{
+			strokeColor : "rgba(11,222,5,1)",
+			fillColor : "rgba(220,220,220,0)",
+			pointStrokeColor : "#fff",
+			data :  [1.0, 11.83, 46.36, 101.58, 174.86, 267.34, 379.9, 479.26, 537.13, 580.13, 630.99, 684.06, 734.52, 783.96, 833.75, 890.34, 959.18, 1022.18, 1063.91, 1085.2, 1086.85, 1095.42, 1133.56, 1188.55, 1249.47, 1319.7, 1402.06, 1484.8, 1557.89, 1622.16, 1678.3, 1719.9, 1741.52, 1754.23, 1767.49, 1784.68, 1808.69, 1848.56, 1835.69, 1713.76, 1615.7] ,
+		}
+		,
+		{
+			strokeColor : "rgba(129,14,170,1)",
+			fillColor : "rgba(220,220,220,0)",
+			pointStrokeColor : "#fff",
+			data :  [1.0, 11.71, 45.49, 98.79, 168.62, 255.83, 360.98, 450.87, 498.43, 531.26, 572.06, 614.99, 655.29, 694.6, 734.29, 780.72, 839.08, 891.13, 922.0, 933.07, 925.6, 926.31, 957.01, 1004.24, 1056.87, 1118.14, 1190.66, 1262.58, 1324.2, 1376.68, 1421.01, 1451.04, 1461.85, 1464.82, 1268.14, 775.4, 431.4, 528.68, 723.52, 909.66, 1079.63] ,
+		}
+		,
+		{
+			strokeColor : "rgba(217,84,251,1)",
+			fillColor : "rgba(220,220,220,0)",
+			pointStrokeColor : "#fff",
+			data :  [1.0, 11.59, 44.64, 96.12, 162.73, 245.09, 343.53, 425.01, 463.69, 488.12, 520.87, 555.92, 588.49, 620.26, 652.56, 691.67, 742.46, 786.6, 809.74, 813.79, 800.42, 796.4, 822.7, 865.12, 912.37, 967.59, 1033.21, 1097.33, 1150.62, 1194.57, 1230.46, 1218.98, 889.6, 438.92, 296.16, 452.73, 597.51, 736.56, 879.89, 1017.74, 1142.49] ,
+		}
+		,
+		{
+			strokeColor : "rgba(244,253,99,1)",
+			fillColor : "rgba(220,220,220,0)",
+			pointStrokeColor : "#fff",
+			data :  [1.0, 11.47, 43.81, 93.55, 157.15, 235.05, 327.42, 401.41, 432.43, 449.91, 476.25, 505.16, 531.84, 557.97, 584.84, 618.6, 663.83, 702.1, 719.6, 718.71, 701.48, 694.68, 718.38, 757.72, 801.25, 852.08, 912.5, 970.61, 971.55, 841.63, 707.53, 678.54, 690.44, 653.24, 597.75, 592.96, 673.44, 780.01, 893.18, 1002.74, 1101.02] ,
+		}
+		,
+		{
+			strokeColor : "rgba(52,119,211,1)",
+			fillColor : "rgba(220,220,220,0)",
+			pointStrokeColor : "#fff",
+			data :  [1.0, 11.35, 43.01, 91.1, 151.87, 225.66, 312.51, 379.82, 404.22, 415.96, 437.2, 461.33, 483.52, 505.42, 528.24, 558.04, 599.09, 632.89, 646.14, 641.7, 621.95, 613.57, 634.96, 600.14, 545.75, 598.09, 689.16, 769.75, 832.87, 881.99, 844.36, 627.81, 414.1, 397.38, 511.85, 607.5, 691.02, 774.41, 861.19, 913.38, 910.5] ,
+		}
+		,
+		{
+			strokeColor : "rgba(110,252,79,1)",
+			fillColor : "rgba(220,220,220,0)",
+			pointStrokeColor : "#fff",
+			data :  [1.0, 11.24, 42.23, 88.74, 146.86, 216.86, 298.69, 360.02, 378.71, 385.72, 402.91, 423.32, 442.06, 460.76, 480.55, 507.37, 545.19, 575.48, 585.45, 578.41, 557.0, 493.84, 319.43, 352.74, 451.07, 541.28, 628.82, 704.42, 761.86, 805.18, 837.46, 741.85, 396.95, 209.8, 339.04, 460.79, 561.87, 656.53, 754.82, 847.09, 926.73] ,
+		}
+		,
+		{
+			strokeColor : "rgba(216,42,87,1)",
+			fillColor : "rgba(220,220,220,0)",
+			pointStrokeColor : "#fff",
+			data :  [1.0, 11.12, 41.47, 86.48, 142.12, 208.62, 285.88, 341.85, 355.58, 358.7, 372.68, 390.2, 406.3, 422.55, 440.04, 464.56, 499.83, 527.29, 534.66, 525.67, 488.86, 224.43, 150.85, 279.85, 386.56, 480.57, 568.61, 642.44, 696.88, 736.68, 765.38, 778.93, 589.86, 200.56, 187.46, 337.99, 457.55, 563.4, 667.48, 761.54, 840.29] ,
+		}
+		,
+		{
+			strokeColor : "rgba(152,139,205,1)",
+			fillColor : "rgba(220,220,220,0)",
+			pointStrokeColor : "#fff",
+			data :  [1.0, 11.01, 40.73, 84.31, 137.62, 200.88, 273.96, 325.12, 334.56, 334.48, 345.93, 361.21, 375.27, 389.65, 405.35, 428.08, 461.28, 486.37, 491.64, 481.17, 317.6, 34.33, 129.63, 258.95, 362.91, 452.4, 534.89, 602.63, 651.07, 685.37, 709.27, 718.8, 569.09, 179.3, 164.06, 314.28, 430.2, 530.62, 628.11, 714.87, 786.19] ,
+		}
+	]
+}
+
+
+
+	var myLine = new Chart(document.getElementById("bsensi").getContext("2d")).Line(lineChartData, {pointDot: false, bezierCurve : false});
+	
+	</script>
 </body>
 </html>
