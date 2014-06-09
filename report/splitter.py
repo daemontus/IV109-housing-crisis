@@ -4,7 +4,7 @@ import sys
 f = open(sys.argv[1])	
 
 head = True
-entries = 30
+entries = 42
 values = [ [] for x in range(entries) ]
 labels = []
 for line in f:
