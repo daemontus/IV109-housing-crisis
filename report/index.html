@@ -83,17 +83,24 @@
 		</div>
 	</div>
 	<p>
-		Ako bolo spomenuté, parametre A a B v sebe zahŕňajú množstvo rôznych faktorov odohrávajúcich sa na trhu s nehnuteľnosťami, preto nie je jednoduché odhadnúť ich správne hodnoty. V skratke by sa dalo povedať, že predstavujú flexibilitu systému vzhľadom na ceny nehnuteľností, teda ako rýchlo a účinne je systém schopný reagovať na zmeny cien. V prípade že sa teda ich hodnoty blížia jednej, je vývoj cien domov značne predvídateľný a prakticky kopíruje vývoj úrokovej miery, ktorá v tom okamihu zostáva jediným podstatným faktorom. Na druhej strane, v prípade že tieto parametre znížime zhruba na B=0.01 a A=0.005, teda pomerne statický trh, dostávame sa na hodnoty podobné skutočnému vývoju cien. (Náš rast je predsa len o niečo nižší, keďže nezahŕňame napr. špekulatívne skupovanie nehnuteľností) Takéto hodnoty taktiež zodpovedajú predpokladu, ktorý sme spomenuli vyššie, a to síce že pre priemerného američana nezohrávala až tak výrazne úlohu cena domu ako takého ako cena a výhodnosť hypotéky.  
+		Ako bolo spomenuté, parametre A a B v sebe zahŕňajú množstvo rôznych faktorov odohrávajúcich sa na trhu s nehnuteľnosťami, preto nie je jednoduché odhadnúť ich správne hodnoty. V skratke by sa dalo povedať, že ich veľkosť predstavuje flexibilitu systému vzhľadom na ceny nehnuteľností, teda ako rýchlo a účinne je systém schopný reagovať na zmeny cien. V prípade že sa teda ich hodnoty blížia jednej, je vývoj cien domov značne predvídateľný a prakticky kopíruje vývoj úrokovej miery, ktorá v tom okamihu zostáva jediným podstatným faktorom. Na druhej strane, v prípade že tieto parametre znížime zhruba na B=0.01 a A=0.005, teda vytvoríme pomerne pomaly reagujúci trh, dostávame sa na hodnoty podobné skutočnému vývoju cien. !!! Ceny domov, tabulka. Náš rast je predsa len o niečo nižší, keďže nezahŕňame napr. špekulatívne skupovanie nehnuteľností zá účelom investovania, ktoré väčšinou neprebieha formou hypoték. Takéto hodnoty parametrov A a B taktiež zodpovedajú predpokladu, ktorý sme spomenuli vyššie, a to síce že pri kúpe nehnuteľnosti nezohrávala z dlhodobého hľadiska až tak výrazne úlohu cena domu ako cena a výhodnosť hypotéky. Z toho dôvodu je hodnota parametera A nižšia ako parametera B.  
 	</p>
 	<p>
-		Miera prefinancovania musí byť na správne fungovanie normovaná, keďže proces výpočtu cien je nastavený tak, že absolútna hodnota cien závisí od počtu domov v systéme s ktorým sme začali. (To nie je problém, keďže nás zaujíma hlavne zmena ceny, nie hodnota samotná) Mieru prefinancovania je teda nutné nastaviť aby sa pri dostatočnom raste cien pohybovala okolo jednotky a pri spomalení rastu klesla blízko k nule. 
+		Miera prefinancovania musí byť na správne fungovanie normovaná, keďže proces výpočtu cien je nastavený tak, že samotná hodnota cien závisí od počtu domov v systéme na začiatku a od konštantných faktorov dopytu a ponuky. To však nie je problém, keďže nás zaujíma hlavne zmena ceny, nie hodnota samotná. Mieru prefinancovania je teda nutné nastaviť tak, aby sa pri dostatočnom raste cien pohybovala okolo jednotky a pri spomalení rastu klesla blízko k nule. 
 	</p>
 	<div  id="abparams-sensi">
 			<figure class="graph" id="refinance-graph">
 				<canvas id="refinance" height="450" width="920"></canvas>
 				<figcaption>Graf 3: Senzitivita faktoru prefinancovania (relatívna cena domov na trhu v čase od 1/1/1990 do 31/12/2010).</figcaption>
 			</figure>
-		</div>
+	</div>
+	<p>
+		V grafoch XX a XY môžeme vidieť vplyv solventnosti klientov na ceny nehnuteľností bez a s vplyvom prefinancovania. Môžme vidieť, že bez povoleného prefinancovania sa začínajú krachy prejavujú oveľa skôr. Napriek tomu že ceny v systéme bez prefinancovania klesajú po krachu pri vysokej miere bankrotu hypoték na menšie hodnoty ako v systéme s prefinancovaním, celková povaha systému pri nižších bankrotových mierach je stabilnejšia, pretože rizikové hypotéky zbankrotujú skôr.
+	</p>
+	</section>
+
+	<section>
+	<h2>Záverečné pozorovania</h2>
 	</section>
 
 	<footer>
