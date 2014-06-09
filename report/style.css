@@ -86,7 +86,18 @@ div#abparams-sensi
 	display: inline-table;
 }
 
+div#souvergnity-sensi
+{
+	width: 450px;
+	display: inline-table;
+}
+
 div#abparams-sensi>canvas
+{
+	width: 450px;
+}
+
+div#souvergnity-sensi>canvas
 {
 	width: 450px;
 }
