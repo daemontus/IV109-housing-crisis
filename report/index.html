@@ -17,7 +17,7 @@
 	<section id="intro" class="chapter">
 	<h2 class="chapter-title">Úvod</h2>
 	<p>
-		V tejto práci sa pokúšame o vytvorenie modelu realitného trhu v USA v období medzi rokmi 1990-2010, ktorého nestabilita viedla k finačnej kríze v roku 2008. V našom modeli budeme skúmať niekoľko kľúčových aspektov ktoré viedli k zníženiu cien nehnuteľností a zvýšenému počtu majiteľov domov neschopných splácať hypotéku, pričom ukážeme že tieto dva pojmy sú v skutočnosti úzko previazané. Konkrétne budeme skúmať úrokovú mieru hypoték, ktorá je centrálne regulovaná. Ďalej mieru refinancovania, ktorá je čiastočne dôsledkom konkurenčného prostredia na trhu s hypotékami, no v konečnom dôsledku závisí hlavne od vývoja cien domov a nakoniec finančnú suverenitu klientov bánk.
+		V tejto práci sa pokúšame o vytvorenie modelu realitného trhu v USA v období medzi rokmi 1990-2010, ktorého nestabilita viedla k finačnej kríze v roku 2008. V našom modeli budeme skúmať niekoľko kľúčových aspektov ktoré viedli k zníženiu cien nehnuteľností a zvýšenému počtu majiteľov domov neschopných splácať hypotéku, pričom ukážeme že tieto dva pojmy sú v skutočnosti úzko previazané. Konkrétne budeme skúmať úrokovú mieru hypoték, ktorá je centrálne regulovaná. Ďalej mieru prefinancovania, ktorá je čiastočne dôsledkom konkurenčného prostredia na trhu s hypotékami, no v konečnom dôsledku závisí hlavne od vývoja cien domov a nakoniec finančnú suverenitu klientov bánk.
 	</p>
 	<h3 class="subsection-title">Popis problému</h3>
 	<p>
@@ -40,7 +40,7 @@
 		</figure>
 	</div>
 	<p>
-		Prečo ale potom hypotéky nebankrotovali postupne ale hromadili sa na trhu? Lebo na hypotekárnom trhu vystupuje ešte jeden podstatný faktor, na ktorý sa často zabúda, a tým je prefinancovanie. Prefinancovanie(Refinancing) je populárny spôsob ako využiť rast cien domov na splácanie úrokov hypoték. Na to, aby tento proces mohol fungovať je nutné aby cena nehnuteľnosti rástla aspoň rovnako rýchlo ako je úroková miera na danej hypotéke. V takom prípade je možné na nehnuteľnosť uvaliť novú hypotéku na vyššiu sumu, pričom tento rozdiel sa použije práve na splatenie pôvodnej hypotéky. Tento dnes populárny mechanizmus veľmi nebezpečne ovplyvňuje finančný trh, vytvára totiž ilúziu stability a v dobe rastu dokáže výrazne oslabiť neschopnosť klientov splácať. Podľa výskumov sa dá vďaka refinancovaniu umelo zvýšiť solventnosť klientov až o 60% <a target="_blank" href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2184514" class="reference">[?]</a>. V prípade zastavenia rastu (nemusí ani dôjsť k poklesu rastu, stačí mierne spomalenie pod hranicu úrokovej miery) je následne takýto systém zaplavený bankrotujúcimi klientmi. Nesprávne ohodnotené CDO založené na takýchto hypotékach sa potom umelo zdajú byť extrémne stabilnou a silnou investíciou. 
+		Prečo ale potom hypotéky nebankrotovali postupne ale hromadili sa na trhu? Lebo na hypotekárnom trhu vystupuje ešte jeden podstatný faktor, na ktorý sa často zabúda, a tým je prefinancovanie. Prefinancovanie(Refinancing) je populárny spôsob ako využiť rast cien domov na splácanie úrokov hypoték. Na to, aby tento proces mohol fungovať je nutné aby cena nehnuteľnosti rástla aspoň rovnako rýchlo ako je úroková miera na danej hypotéke. V takom prípade je možné na nehnuteľnosť uvaliť novú hypotéku na vyššiu sumu, pričom tento rozdiel sa použije práve na splatenie pôvodnej hypotéky. Tento dnes populárny mechanizmus veľmi nebezpečne ovplyvňuje finančný trh, vytvára totiž ilúziu stability a v dobe rastu dokáže výrazne oslabiť neschopnosť klientov splácať. Podľa výskumov sa dá vďaka prefinancovaniu umelo zvýšiť solventnosť klientov až o 60% <a target="_blank" href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2184514" class="reference">[?]</a>. V prípade zastavenia rastu (nemusí ani dôjsť k poklesu rastu, stačí mierne spomalenie pod hranicu úrokovej miery) je následne takýto systém zaplavený bankrotujúcimi klientmi. Nesprávne ohodnotené CDO založené na takýchto hypotékach sa potom umelo zdajú byť extrémne stabilnou a silnou investíciou. 
 	</p>
 	<p>
 		Keď sa spoja dohromady tieto tri faktory, vzniká systém ktorý na začiatku naštartuje rast cien domov, následne s rastom dopytu po CDO klesá solventnosť klientov. Rast cien ale vďaka prefinancovaniu tento pokles dokáže do určitej miery vyrovnávať, a teda sa na trhu hromadia rizikové hypotéky. V prípade spomalenia rastu cien tieto hypotéky bankrotujú, čím zvyšujú ponuku a ďalej znižujú ceny nehnuteľností. Tak vzniká pozitívna väzba ktorá naruší rovnováhu v systéme. 
@@ -54,25 +54,11 @@
 			<figcaption><p>Obrázok 2: Model systémovej dynamiky nášho modelu (Stella export).</p></figcaption>
 	</figure>
 	<p>
-		Ceny domov modelujeme rovnakým spôsobom ako napr. !!! Citation needed. Samotná cena je súčtom rozdielov ponuky a dopytu za skúmané obdobie. Teda v prípade že je tento rozdiel záporný, cena klesá, pokial je kladný, cena stúpa. Ponuka nehnuteľností závisí od základného konštantného faktoru, ktorý je na začiatku nastavený tak, aby bol systém vyvážený, a od samotných cien domov, ktorých výška motivuje investorov k výstavbe. Parameter B by sa dal teda nazvať aj miera motiváce, a zahŕňa v sebe množstvo rozličných faktorov. Jeho stabilite a vplyvu sa budeme venovať neskôr. Dopyt je modelovaný podobným spôsobom. Konkrétne závisí opäť od konštantného faktora a cien nehnuteľností (tie sú normované parametrom A, k jeho stabilite a správaniu opäť neskôr). Keďže nás zaujíma dopyt po hypotékach, hrá výraznú úlohu aj priemerná úroková miera hypoték. Tá je v našom prípade regulovaná federálnou vládou USA a hodnoty ktoré používa náš model priamo zodpovedajú skutočnej úrokovej miere v rokoch 1990 až 2010. Opäť platí, že výrazná zmena úrokov dokáže vyrovnať výkyvy cien domov. 
+		Ceny domov modelujeme rovnakým spôsobom ako napr. <a href="http://econstor.eu/bitstream/10419/38760/1/593476174.pdf">[?]</a>. Samotná cena je súčtom rozdielov ponuky a dopytu za skúmané obdobie. Teda v prípade že je tento rozdiel záporný, cena klesá, pokial je kladný, cena stúpa. Ponuka nehnuteľností závisí od základného konštantného faktoru, ktorý je na začiatku nastavený tak, aby bol systém vyvážený, a od samotných cien domov, ktorých výška motivuje investorov k výstavbe. Parameter B by sa dal teda nazvať aj miera motiváce, a zahŕňa v sebe množstvo rozličných faktorov. Jeho stabilite a vplyvu sa budeme venovať neskôr. Dopyt je modelovaný podobným spôsobom. Konkrétne závisí opäť od konštantného faktora a cien nehnuteľností (tie sú normované parametrom A, k jeho stabilite a správaniu opäť neskôr). Keďže nás zaujíma dopyt po hypotékach, hrá výraznú úlohu aj priemerná úroková miera hypoték. Tá je v našom prípade regulovaná federálnou vládou USA a hodnoty ktoré používa náš model priamo zodpovedajú skutočnej úrokovej miere v rokoch 1990 až 2010 <a href="http://www.escapesomewhere.com/cgi-bin/mort_rates/year_mort_rates.cgi?view=month" target="_blank">[?]</a>. Opäť platí, že výrazná zmena úrokov dokáže vyrovnať výkyvy cien domov. 
 	</p> 
 	<p>
-		Trh s hypotékami modelujeme pomocou dvoch rezervoárov, jeden reprezentuje aktuálny počet domov na predaj, druhý počet domov na ktoré je uvalená hypotéka. Počet domov na predaj závisí jednak od ponuky, ktorá je popísaná vyššie a taktiež od počtu bankrotujúcich hypoték, ktoré vracajú istý počet domov späť na trh. Množstvo domov na ktorých je uvalená hypotéka narastá úmerne dopytu, pričom ale počet domov na predaj nemôže byť záporný. Množstvo bankrotujúcich hypoték následne závisí od dvoch faktorov, a to síce finančná solventnosť klientov a miera refinancovania. 
+		Trh s hypotékami modelujeme pomocou dvoch rezervoárov, jeden reprezentuje aktuálny počet domov na predaj, druhý počet domov na ktoré je uvalená hypotéka. Počet domov na predaj závisí jednak od ponuky, ktorá je popísaná vyššie a taktiež od počtu bankrotujúcich hypoték, ktoré vracajú istý počet domov späť na trh. Množstvo domov na ktorých je uvalená hypotéka narastá úmerne dopytu, pričom ale počet domov na predaj nemôže byť záporný. Množstvo bankrotujúcich hypoték následne závisí od dvoch faktorov, a to síce finančná solventnosť klientov a miera prefinancovania. 
 	</p>
-	<div>
-		<div id="souvergnity-sensi">
-			<figure class="graph" id="souvergnity-wout-refinance-figure">
-				<canvas id="souvergnity-wout-refinance" height="225" width="450"></canvas>
-				<figcaption>Graf 1: Senzitivita parametru solventnosti klientov bez refinancovania (relatívna cena domov na trhu v čase od 1/1/1990 do 31/12/2010).</figcaption>
-			</figure>
-		</div>
-		<div  id="abparams-sensi">
-			<figure class="graph" id="souvergnity-w-refinance-figure">
-				<canvas id="souvergnity-w-refinance" height="225" width="450"></canvas>
-				<figcaption>Graf 2: Senzitivita parametru solventnosti klientov s refinancovaním (relatívna cena domov na trhu v čase od 1/1/1990 do 31/12/2010).</figcaption>
-			</figure>
-		</div>
-	</div>
 	<p>
 		Finančná solventnosť je nastavená tak, aby vyjadrovala koľko % hypoték musí v priemere mesačne zbankrotovať v prípade, že uvažujeme priemernú dĺžku hypotéky 30 rokov. Číslo je také nízke preto, lebo simulácia prebieha po mesiacoch. Teda ak napr. každý mesiac zbankrotuje 0.000166 hypoték, po 30 rokoch to bude približne 5%. Miera prefinancovania sa počíta ako derivácia cien domov v danom období, pričom je opäť normovaná vhodným faktorom tak, aby správne redukovala mieru bankrotov. (Pri miere 1 nastáva polovičná redukcia, pri miere 0 žiadna) 
 	</p>
@@ -80,19 +66,19 @@
 	<section class="chapter">
 	<h2 class="chapter-title">Analýza parametrov</h2>
 	<p>
-		Najprv zhodnotíme stabilitu parametrov cien domov, pričom meriania boli za účelom sprehľadnenia vykonené bez zohľadnenia prefinancovania. 
+		Najprv zhodnotíme stabilitu parametrov cien domov, pričom tieto meriania boli za účelom sprehľadnenia vykonené bez zohľadnenia prefinancovania.  
 	</p>
 	<div>
 		<div id="abparams-sensi">
 			<figure class="graph" id="asensi-figure">
 				<canvas id="asensi" height="225" width="450"></canvas>
-				<figcaption>Graf 3: Senzitivita parametru A (relatívna cena domov na trhu v čase od 1/1/1990 do 31/12/2010).</figcaption>
+				<figcaption>Graf 1: Senzitivita parametru A z intervalu (0.001,0.01), B=0.01 (cena domov po mesiacoch od roku 1990 do 2010).</figcaption>
 			</figure>
 		</div>
 		<div  id="abparams-sensi">
 			<figure class="graph" id="bsensi-figure">
 				<canvas id="bsensi" height="225" width="450"></canvas>
-				<figcaption>Graf 4: Senzitivita parametru B (relatívna cena domov na trhu v čase od 1/1/1990 do 31/12/2010).</figcaption>
+				<figcaption>Graf 2: Senzitivita parametru B z intervalu (0.005,0.05), A=0.005 (cena domov po mesiacoch od roku 1990 do 2010).</figcaption>
 			</figure>
 		</div>
 	</div>
@@ -105,16 +91,35 @@
 	<div  id="abparams-sensi">
 			<figure class="graph" id="refinance-graph">
 				<canvas id="refinance" height="450" width="920"></canvas>
-				<figcaption>Graf 3: Senzitivita faktoru prefinancovania (relatívna cena domov na trhu v čase od 1/1/1990 do 31/12/2010).</figcaption>
+				<figcaption>Graf 3: Senzitivita faktoru prefinancovania (cena domov na trhu v čase od 1/1/1990 do 31/12/2010).</figcaption>
 			</figure>
 	</div>
 	<p>
-		V grafoch XX a XY môžeme vidieť vplyv solventnosti klientov na ceny nehnuteľností bez a s vplyvom prefinancovania. Môžme vidieť, že bez povoleného prefinancovania sa začínajú krachy prejavujú oveľa skôr. Napriek tomu že ceny v systéme bez prefinancovania klesajú po krachu pri vysokej miere bankrotu hypoték na menšie hodnoty ako v systéme s prefinancovaním, celková povaha systému pri nižších bankrotových mierach je stabilnejšia, pretože rizikové hypotéky zbankrotujú skôr.
+		V grafoch 4 a 5 môžeme vidieť vplyv solventnosti klientov na ceny nehnuteľností bez a s prefinancovaním. Vidíme, že bez povoleného prefinancovania sa začínajú krachy prejavovať skôr. Napriek tomu že ceny v systéme bez prefinancovania klesajú po krachu pri vysokej miere bankrotu hypoték na menšie hodnoty ako v systéme s prefinancovaním, celková povaha systému pri nižších bankrotových mierach je stabilnejšia, pretože rizikové hypotéky zbankrotujú skôr.
 	</p>
+
+	<div>
+		<div id="souvergnity-sensi">
+			<figure class="graph" id="souvergnity-wout-refinance-figure">
+				<canvas id="souvergnity-wout-refinance" height="225" width="450"></canvas>
+				<figcaption>Graf 4: Senzitivita parametru solventnosti klientov bez prefinancovania (cena domov na trhu v čase od 1/1/1990 do 31/12/2010).</figcaption>
+			</figure>
+		</div>
+		<div  id="abparams-sensi">
+			<figure class="graph" id="souvergnity-w-refinance-figure">
+				<canvas id="souvergnity-w-refinance" height="225" width="450"></canvas>
+				<figcaption>Graf 5: Senzitivita parametru solventnosti klientov s prefinancovaním (cena domov na trhu v čase od 1/1/1990 do 31/12/2010).</figcaption>
+			</figure>
+		</div>
+	</div>
+
 	</section>
 
 	<section>
 	<h2>Záverečné pozorovania</h2>
+	<p>
+		Keď následne všetky tieto faktory skombinujeme, dostávame systém, ktorý je schopný napodobniť práve udalosti z roku 2008, a to aj vrátanie načasovania krachu. Na druhej strane, pri tých istých parametroch avšak bez prefinancovania nie je možné podobný výsledok dosiahnuť. Pokles cien taktiež nastane, no je miernejší a nie je taký prudký, teda by mal v reálnom svete miernejšie následky. Výsledok by ale zrejme nebol o toľko lepší, pretože väčšina rizikových CDO by tak či tak skrachovala, no priebeh by nebol taký prudký. 
+	</p>
 	</section>
 
 	<footer>
