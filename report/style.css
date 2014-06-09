@@ -19,7 +19,7 @@ body
 {
 	font-family: 'Roboto', sans-serif;
 	margin: 0 auto;
-	background-color: #FCFCFC;
+	background-color: #FFFFFF;
 	color: #2D2D2D;
 	font-size: 17px;
 	line-height: 22px;
@@ -29,7 +29,6 @@ div#page
 {
 	margin: 0 auto;
 	width: 920px;
-	background-color: #FCFCFC;;
 }
 
 header 
@@ -73,7 +72,6 @@ a.reference
 	border-bottom: dotted 1px;
 	padding: -8px;
 	text-decoration: none;
-	vertical-align: text-top;
 }
 
 a.reference:hover
