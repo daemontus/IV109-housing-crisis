@@ -4,7 +4,7 @@ import sys
 f = open(sys.argv[1])	
 
 head = True
-entries = 42
+entries = 10
 values = [ [] for x in range(entries) ]
 labels = []
 for line in f:
@@ -14,7 +14,13 @@ for line in f:
 		split = line.split()
 		labels.append(split[0])
 		split = split[1:]
+		nsplit = []
+		for l in split:
+			l = l.replace(',','')
+			nsplit.append(l)
+		split = nsplit
 		split = map(float, split)
+		#values.append(split)
 		for x in range(entries):
 			values[x].append(split[x])
 
